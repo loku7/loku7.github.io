@@ -1,0 +1,66 @@
+[
+  {
+    "id":1,
+    "productName": "",
+    "price": "",
+    "discount": "",
+    "imageUrl":"assets/images_product/featuredProducts.jpg",
+    "specialTag":""
+  },
+  {
+    "id":2,
+    "productName": "H&M chino Shorts",
+    "price": "$12",
+    "discount": "",
+    "imageUrl":"assets/images_product/chino_shorts.jpg",
+    "specialTag":"hit"
+  },
+  {
+    "id":3,
+    "productName": "Bobbies Elegant Leather Driving Shoes",
+    "price": "$140",
+    "discount": "",
+    "imageUrl":"assets/images_product/driving_shoes.jpg",
+    "specialTag":""
+  },
+  {
+    "id":4,
+    "productName": "Fiorelli Rita Striped Tote Bag",
+    "price": "$170",
+    "discount": "",
+    "imageUrl":"assets/images_product/tote_bag.jpg",
+    "specialTag":"sale"
+  },
+  {
+    "id":5,
+    "productName": "H&M Polo Shirt",
+    "price": "$9.95",
+    "discount": "",
+    "imageUrl":"assets/images_product/polo_shirt.jpg",
+    "specialTag":""
+  },
+  {
+    "id":6,
+    "productName": "ASOS Skinny Band Felt Floppy Hat",
+    "price": "$24",
+    "discount": "",
+    "imageUrl":"assets/images_product/floppy_hat.jpg",
+    "specialTag":"hit"
+  },
+  {
+    "id":7,
+    "productName": "Ted Baker Leather Messenger Bag",
+    "price": "$344",
+    "discount": "",
+    "imageUrl":"assets/images_product/messenger_bag.jpg",
+    "specialTag":"new"
+  },
+  {
+    "id":8,
+    "productName": "H&M chino Shorts",
+    "price": "$69",
+    "discount": "",
+    "imageUrl":"assets/images_product/canvas_parka.jpg",
+    "specialTag":""
+  }
+]
