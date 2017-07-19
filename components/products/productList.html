@@ -2,7 +2,21 @@
     <div class="row">
         <div class="col-md-10 col-xs-10" style="padding:0px">
             <div class="slideImage">
-                <img ng-src="{{productListC.slideImg.imageUrl}}" style="width:100%;height:400px"></img>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div ng-repeat="url in productListC.slideImg.imageUrl track by $index" ng-class="$index === 0 ? 'item active' : 'item'">
+                            <img ng-src="{{url}}" style="width:100%;height:400px"></img>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
                 <h5>{{productListC.slideImg.category}}</h5>
                 <h2>{{productListC.slideImg.ProductName}}</h2>
                 <h6>{{productListC.slideImg.description}}</h6>
@@ -12,58 +26,56 @@
         <div class="col-md-2 col-xs-2">
             <div ng-repeat="fashion in productListC.fashion">
                 <div class="row sibarImg">
-                    <div>
-                        <img ng-src="{{fashion.imageUrl}}" style="height:100px;width:100%" ng-click="productListC.scrolImg(fashion)"></img>
-                    </div>
+                        <img ng-src="{{fashion.imageUrl[0]}}" style="height:100px;width:100%" ng-click="productListC.scrolImg(fashion)"></img>
                 </div>
             </div>
         </div>
     </div>
-        <div ng-repeat="product in productListC.Products">
-            <div class="row row-relative" ng-if="$index % 4 == 0">
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="col-border-padding text-center">
-                        <p>{{productListC.Products[$index].productName}} </p>
-                        <img ng-src="{{productListC.Products[$index].imageUrl}}"></img>
-                        <p>{{productListC.Products[$index].price}}</p>
-                        <div ng-if="productListC.Products[$index].specialTag">
-                            <img ng-src='assets/images/{{productListC.Products[$index].specialTag}}.png'></img>
-                        </div>
+    <div ng-repeat="product in productListC.Products">
+        <div class="row row-relative" ng-if="$index % 4 == 0">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="col-border-padding text-center">
+                    <p>{{productListC.Products[$index].productName}} </p>
+                    <img ng-src="{{productListC.Products[$index].imageUrl}}"></img>
+                    <p>{{productListC.Products[$index].price}}</p>
+                    <div ng-if="productListC.Products[$index].specialTag">
+                        <img ng-src='assets/images/{{productListC.Products[$index].specialTag}}.png'></img>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 col-border" ng-if="productListC.Products.length > ($index + 1)">
-                    <div class="col-border-padding text-center">
-                        <p>{{productListC.Products[$index + 1].productName}}</p>
-                        <img ng-src="{{productListC.Products[$index + 1].imageUrl}}"></img>
-                        <p>{{productListC.Products[$index+1].price}}</p>
-                        <div ng-if="productListC.Products[$index + 1].specialTag">
-                            <img ng-src='assets/images/{{productListC.Products[$index + 1].specialTag}}.png'></img>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 col-border" ng-if="productListC.Products.length > ($index + 2)">
-                    <div class="col-border-padding text-center">
-                        <p>{{productListC.Products[$index + 2].productName}}</p>
-                        <img ng-src="{{productListC.Products[$index + 2].imageUrl}}"></img>
-                        <p>{{productListC.Products[$index+2].price}}</p>
-                        <div ng-if="productListC.Products[$index + 2].specialTag">
-                            <img ng-src='assets/images/{{productListC.Products[$index + 2].specialTag}}.png'></img>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 col-border" ng-if="productListC.Products.length > ($index + 3)">
-                    <div class="col-border-padding text-center">
-                        <p>{{productListC.Products[$index + 3].productName}}</p>
-                        <img ng-src="{{productListC.Products[$index + 3].imageUrl}}"></img>
-                        <p>{{productListC.Products[$index+3].price}}</p>
-                        <div ng-if='productListC.Products[$index + 3].specialTag'>
-                            <img ng-src="assets/images/{{productListC.Products[$index + 3].specialTag}}.png"></img>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 col-border" ng-if="productListC.Products.length > ($index + 1)">
+                <div class="col-border-padding text-center">
+                    <p>{{productListC.Products[$index + 1].productName}}</p>
+                    <img ng-src="{{productListC.Products[$index + 1].imageUrl}}"></img>
+                    <p>{{productListC.Products[$index+1].price}}</p>
+                    <div ng-if="productListC.Products[$index + 1].specialTag">
+                        <img ng-src='assets/images/{{productListC.Products[$index + 1].specialTag}}.png'></img>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 col-border" ng-if="productListC.Products.length > ($index + 2)">
+                <div class="col-border-padding text-center">
+                    <p>{{productListC.Products[$index + 2].productName}}</p>
+                    <img ng-src="{{productListC.Products[$index + 2].imageUrl}}"></img>
+                    <p>{{productListC.Products[$index+2].price}}</p>
+                    <div ng-if="productListC.Products[$index + 2].specialTag">
+                        <img ng-src='assets/images/{{productListC.Products[$index + 2].specialTag}}.png'></img>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 col-border" ng-if="productListC.Products.length > ($index + 3)">
+                <div class="col-border-padding text-center">
+                    <p>{{productListC.Products[$index + 3].productName}}</p>
+                    <img ng-src="{{productListC.Products[$index + 3].imageUrl}}"></img>
+                    <p>{{productListC.Products[$index+3].price}}</p>
+                    <div ng-if='productListC.Products[$index + 3].specialTag'>
+                        <img ng-src="assets/images/{{productListC.Products[$index + 3].specialTag}}.png"></img>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
     <div class="row row-relative">
         <div class="col-md-2 col-sm-2 col-xs-2" ng-repeat="brand in productListC.brand">
             <div class="brandImG">
@@ -71,5 +83,4 @@
             </div>
         </div>
     </div>
-
 </div>

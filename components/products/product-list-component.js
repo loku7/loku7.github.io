@@ -19,6 +19,7 @@ component("productsList", {
             }).then(function successCallback(response) {
                 self.fashion = response.data.fash;
                 self.slideImg=response.data.fash[0];
+                console.log(self.slideImg.imageUrl[0],"url");
                 self.brand = response.data.brand;
             }, function errorCallback(response) {
                  console.log("error in retriving data in fashion");

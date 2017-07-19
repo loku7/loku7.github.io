@@ -1,27 +1,27 @@
 {"fash":[
   { "category":"MEN",
-    "imageUrl":"assets/img/jeans.jpg",
+    "imageUrl":["assets/img/jeans.jpg","assets/img/jeans.jpg","assets/img/jeans.jpg","assets/img/jeans.jpg"],
     "ProductName":"Replay Jeans Hyperflex",
     "description":"Skinny Comfort Ultra Stretch Light Wash",
     "price":"$140"
   },
   {
     "category":"MEN",
-    "imageUrl":"assets/img/shorts.jpg",
+    "imageUrl":["assets/img/shorts.jpg","assets/img/shorts.jpg","assets/img/shorts.jpg","assets/img/shorts.jpg"],
     "ProductName":"Replay Jeans Shorts",
     "description":"Skinny Comfort Ultra Stretch Light Wash Shorts",
     "price":"$80"
   },
   {
     "category":"WOMEN",
-    "imageUrl":"assets/img/shoes.jpg",
+    "imageUrl":["assets/img/shoes.jpg","assets/img/shoes.jpg","assets/img/shoes.jpg","assets/img/shoes.jpg"],
     "ProductName":"Replay Shoes",
     "description":"Skinny Comfort Shoes",
     "price":"$100"
   },
   {
     "category":"MEN",
-    "imageUrl":"assets/img/shorts2.jpg",
+    "imageUrl":["assets/img/shorts2.jpg","assets/img/shorts2.jpg","assets/img/shorts2.jpg","assets/img/shorts2.jpg"],
     "ProductName":"Replay Jeans shorts",
     "description":"Skinny Comfort Ultra Stretch Light Wash shorts",
     "price":"$75"
