@@ -167,3 +167,9 @@
 figure > img {
   height:125px;
 }
+.carousel-control{
+  width:7%;
+}
+.navbar-default{
+  background-color: white;
+}
