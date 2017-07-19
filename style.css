@@ -164,3 +164,6 @@
    border-top: solid 1px #4c4c4c;
    padding-top: 10px;
  }
+figure > img {
+  height:125px;
+}
